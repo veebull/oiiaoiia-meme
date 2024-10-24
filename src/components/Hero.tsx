@@ -20,6 +20,14 @@ const Hero: React.FC = () => {
       >
         The ultimate crypto fusion of "OO EE A E A" and DeFi!
       </motion.p>
+      <motion.p
+        className='text-xl sm:text-2xl mb-8 text-white'
+        initial={{ opacity: 0, scale: 2 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.8 }}
+      >
+        Touch 👆 and pet The Spinning CAT Oiiaoiia!
+      </motion.p>
       <motion.div
         className='mx-auto w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 aspect-w-16 aspect-h-9 overflow-hidden rounded-lg shadow-lg relative z-20'
         initial={{ y: 100, opacity: 0 }}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react'; // Import the icons
 
 const Header: React.FC<{ className?: string }> = ({ className }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,15 +11,17 @@ const Header: React.FC<{ className?: string }> = ({ className }) => {
     >
       <div className='container mx-auto px-4 py-4 flex justify-between items-center'>
         <div className='flex items-center'>
-          <img
-            src='img/oiiaoiia-logo.png'
-            alt='OIIAOIIA Logo'
-            className='w-12 h-12 mr-4'
-          />
           <Link
             to='/'
-            className='text-2xl sm:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600'
+            className='text-2xl sm:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 flex items-center'
           >
+            <img
+              src='img/oiiaoiia-logo-sm.png'
+              width={48}
+              height={48}
+              alt='OIIAOIIA Logo'
+              className='w-12 h-12 mr-4'
+            />
             OIIAOIIA Meme
           </Link>
         </div>
@@ -66,6 +69,13 @@ const Header: React.FC<{ className?: string }> = ({ className }) => {
             </li>
           </ul>
         </nav>
+        {/* Replace text with icons for mobile menu toggle */}
+        <button
+          className='md:hidden text-purple-600 bg-white border-2 border-purple-600 rounded-md p-2'
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
       {isMenuOpen && (
         <nav className='md:hidden bg-white'>
