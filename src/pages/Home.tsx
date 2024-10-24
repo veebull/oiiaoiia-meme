@@ -1,19 +1,18 @@
 import React from 'react';
-import MemeHistory from '../components/MemeHistory';
+import Hero from '../components/Hero';
+import MemeOrigin from '../components/MemeOrigin';
 import Tokenomics from '../components/Tokenomics';
-import BuyButton from '../components/BuyButton';
+import BuySection from '../components/BuySection';
+import CommunityContribution from '../components/CommunityContribution';
 
 const Home: React.FC = () => {
   return (
-    <div className='space-y-12'>
-      <h1 className='text-4xl font-bold text-center'>
-        Welcome to OIIAOIIA Meme
-      </h1>
-      <MemeHistory />
+    <div className='space-y-16 font-comic'>
+      <Hero />
+      <MemeOrigin />
+      <CommunityContribution />
       <Tokenomics />
-      <div className='text-center'>
-        <BuyButton />
-      </div>
+      <BuySection />
     </div>
   );
 };

@@ -135,3 +135,29 @@ button:focus-visible {
     @apply bg-background text-foreground;
   }
 }
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-yellow-300 to-pink-500 text-black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Comic Neue', sans-serif;
+  }
+  .font-comic {
+    font-family: 'Comic Neue', sans-serif;
+  }
+}
+
+@layer components {
+  .contribution-card {
+    @apply bg-gradient-to-br from-purple-600 to-pink-600 text-white transition-all duration-300 hover:scale-105;
+  }
+
+  .contribution-card-title {
+    @apply text-2xl font-bold mb-2;
+  }
+
+  .contribution-card-content {
+    @apply text-lg;
+  }
+}
